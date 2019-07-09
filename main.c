@@ -1,10 +1,12 @@
 #include <stdio.h>
+#include <math.h>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_timer.h>
 
 #define WIDTH 600
 #define HEIGHT 600
 #define SPEED 5
+#define POINTS 275
 
 int W(int x);
 int H(int y);
@@ -37,6 +39,8 @@ int main(void) {
 		return 1;
 	}
 
+
+
 	int up = 0,
 		down = 0,
 		left = 0, 
@@ -45,6 +49,13 @@ int main(void) {
 		  ypos = H(100),
 		  x_vel = 0,
 		  y_vel = 0;
+
+	// make points for sinewave
+	SDL_Point points[(POINTS * 2)+1];
+	for(int i = -POINTS; i <= POINTS; i++) {
+		points[i + POINTS].x = W(i);
+		points[i + POINTS].y = H(50*sin(12.5*i)); //50 for height & 12.5 for period
+	}
 
 	int close_requested = 0;
 	while(!close_requested) {
@@ -121,6 +132,9 @@ int main(void) {
 		// Thick Lines for y axis
 		SDL_RenderDrawLine(rend, 299, 25, 299, 575);
 		SDL_RenderDrawLine(rend, 301, 25, 301, 575);
+
+		// Render Sine Wave
+		SDL_RenderDrawLines(rend, points, POINTS*2);
 
 		// Line movement calculations
 		x_vel = y_vel = 0;

@@ -5,7 +5,7 @@ CFLAGS = -g3 -ggdb -Wall
 # COMPILE flags
 #CFLAGS = -Wall -O3
 
-LIBS = `sdl2-config --libs --cflags`
+LIBS = `sdl2-config --libs --cflags` -lm
 
 TARGET = main
 
