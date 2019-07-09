@@ -114,6 +114,15 @@ int main(void) {
 			SDL_RenderDrawLine(rend, 25, i, 575, i);
 		}
 
+		// Thick Lines for x axis
+		SDL_RenderDrawLine(rend, 25, 299, 575, 299);
+		SDL_RenderDrawLine(rend, 25, 301, 575, 301);
+
+		// Thick Lines for y axis
+		SDL_RenderDrawLine(rend, 299, 25, 299, 575);
+		SDL_RenderDrawLine(rend, 301, 25, 301, 575);
+
+		// Line movement calculations
 		x_vel = y_vel = 0;
 		if(up && !down) y_vel = -SPEED;
 		if(down && !up) y_vel = SPEED;
