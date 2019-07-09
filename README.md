@@ -2,9 +2,9 @@
 
 ### Requirements
 
-. . + SDL
-. . + GCC
-. . + Linux
++ SDL
++ GCC
++ Linux
 
 ### Usage:
 
