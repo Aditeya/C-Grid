@@ -7,7 +7,7 @@ CFLAGS = -g3 -ggdb -Wall
 
 LIBS = `sdl2-config --libs --cflags`
 
-TARGET = grid
+TARGET = main
 
 $(TARGET):$(TARGET).c
 	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c $(LIBS)
