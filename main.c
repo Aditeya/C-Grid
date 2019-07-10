@@ -54,7 +54,7 @@ int main(void) {
 	SDL_Point points[(POINTS * 2)+1];
 	for(int i = -POINTS; i <= POINTS; i++) {
 		points[i + POINTS].x = W(i);
-		points[i + POINTS].y = H(50*sin(12.5*i)); //50 for height & 12.5 for period
+		points[i + POINTS].y = H(50*sin(i/12.5)); //50 for height & 12.5 for period
 	}
 
 	int close_requested = 0;
