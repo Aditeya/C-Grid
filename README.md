@@ -1,5 +1,7 @@
 # Graph Grid
 
+![Graph Grid](/imgs/grid.png "Graph Grid")
+
 ### Requirements
 
 + SDL
