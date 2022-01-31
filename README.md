@@ -11,3 +11,4 @@
 ### Usage:
 
 WASD or Arrow Keys
+Q to quit
