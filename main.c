@@ -67,6 +67,9 @@ int main(void) {
 					break;
 				case SDL_KEYDOWN:
 					switch(event.key.keysym.scancode) {
+						case SDL_SCANCODE_Q:
+							close_requested = 1;
+							break;
 						case SDL_SCANCODE_W:
             			case SDL_SCANCODE_UP:
             			    up = 1;
